@@ -1,0 +1,17 @@
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(30, 180, 30, 0.822);
+  }
+
+.login-page {
+    width: 100%;
+    height: 100vh;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+}
+
+.form-left i {
+    font-size: 100px;
+}
+
+

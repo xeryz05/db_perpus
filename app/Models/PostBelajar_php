@@ -1,0 +1,34 @@
+<?php
+
+namespace App\Models;
+
+use phpDocumentor\Reflection\Types\Self_;
+
+class Post
+{
+    private static $books_posts = [
+            [
+            'image' => 'logo.png',
+            'penulis' => 'hasan baharun',
+            'title' => 'Agama Islam',
+            'slug' => 'agama-islam'
+            ],
+            [
+                'image' => 'logo.png',
+                'penulis' => 'harun baharu',
+                'title' => 'Fiqih',
+                'slug' => 'fiqih'
+            ]
+        ];
+
+        public static function all()
+        {
+            return collect(self::$books_posts);
+        }
+
+        public static function find($slug)
+        {
+            $posts = static::all();
+            return $posts->firstWhere('slug',$slug);
+        }
+}
